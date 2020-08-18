@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="teacherMainPane" prefHeight="768.0" prefWidth="1190.0"  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usman.teacher.TeacherController">
+   <top>
+      <HBox fx:id="teacherHeaderPane" prefHeight="64.0" prefWidth="1190.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="teacherTitleText" strokeType="OUTSIDE" strokeWidth="0.0" text="TEACHER ACTIVITY" underline="true" wrappingWidth="341.87890625">
+               <HBox.margin>
+                  <Insets left="100.0" top="16.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Franklin Gothic Medium Italic" size="23.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="teacherAddBtn" alignment="BOTTOM_CENTER" contentDisplay="TOP" onAction="#teacherAddBtnClick" prefHeight="75.0" prefWidth="93.0" text="ADD">
+               <graphic>
+                  <Pane fx:id="add_icon" prefHeight="30.0" prefWidth="30.0" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="teacherListBtn" alignment="BOTTOM_CENTER" contentDisplay="TOP" onAction="#teacherListBtnClick" prefHeight="64.0" prefWidth="93.0" text="LIST">
+               <graphic>
+                  <Pane fx:id="list_icon" prefHeight="31.0" prefWidth="32.0" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane fx:id="teacherCenterPane" prefHeight="600.0" prefWidth="1190.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutY="233.0" prefHeight="353.0" prefWidth="1190.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Pane prefHeight="337.0" prefWidth="369.0" style="-fx-background-color: #eee;">
+                     <children>
+                        <PieChart fx:id="teacherLanguagePieChart" layoutX="14.0" layoutY="51.0" prefHeight="282.0" prefWidth="339.0" />
+                     </children></Pane>
+                  <Pane fx:id="teacherListChart" prefHeight="353.0" prefWidth="577.0" style="-fx-background-color: #eee;">
+                     <children>
+                        <TableView fx:id="teacherTableView" layoutX="7.0" layoutY="45.0" prefHeight="300.0" prefWidth="562.0">
+                          <columns>
+                            <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+                            <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email" />
+                              <TableColumn fx:id="mobileColumn" prefWidth="75.0" text="Mobile No." />
+                              <TableColumn fx:id="subjectColumn" prefWidth="75.0" text="Subject" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Text fill="#3a3a3c" layoutX="9.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recent Update" wrappingWidth="203.0380859375">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children></Pane>
+               </children>
+            </HBox>
+            <HBox fx:id="teacherDashboardPane" alignment="CENTER" layoutY="52.0" prefHeight="151.0" prefWidth="1190.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Pane fx:id="principlePane" prefHeight="200.0" prefWidth="310.0">
+                     <children>
+                        <Rectangle fx:id="priciplePicture" arcHeight="10.0" arcWidth="10.0" fill="WHITE" height="130.0" layoutX="18.0" layoutY="14.0" opacity="0.9" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="113.0" />
+                        <Label alignment="CENTER" layoutX="122.0" layoutY="29.0" prefHeight="20.0" prefWidth="189.0" text="Md. Usman Ansari">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="123.0" layoutY="61.0" prefHeight="17.0" prefWidth="188.0" text="MOB. NO. : 9852219786">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="124.0" layoutY="89.0" prefHeight="17.0" prefWidth="184.0" text="Computer">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="125.0" layoutY="121.0" prefHeight="17.0" prefWidth="184.0" text="Teacher ID : 06">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="128.0" prefHeight="15.0" prefWidth="112.0" text="Priciple" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children></Pane>
+                  <Pane fx:id="directorPane" prefHeight="200.0" prefWidth="310.0">
+                     <children>
+                        <Rectangle fx:id="directorPicture" arcHeight="10.0" arcWidth="10.0" fill="WHITE" height="130.0" layoutX="18.0" layoutY="14.0" opacity="0.9" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="113.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="126.0" prefHeight="17.0" prefWidth="111.0" text="Director" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" layoutX="122.0" layoutY="29.0" prefHeight="20.0" prefWidth="189.0" text="Abdul Moqueet">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="123.0" layoutY="61.0" prefHeight="17.0" prefWidth="188.0" text="MOB. NO. : 9852219786">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="124.0" layoutY="89.0" prefHeight="17.0" prefWidth="184.0" text="Computer">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="125.0" layoutY="121.0" prefHeight="17.0" prefWidth="184.0" text="Teacher ID : 07">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="coDirectorPane" prefHeight="200.0" prefWidth="310.0">
+                     <children>
+                        <Rectangle fx:id="cDirectorPicture" arcHeight="10.0" arcWidth="10.0" fill="WHITE" height="130.0" layoutX="18.0" layoutY="14.0" opacity="0.9" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="113.0" />
+                        <Label fx:id="teacherName" alignment="CENTER" layoutX="122.0" layoutY="29.0" prefHeight="20.0" prefWidth="189.0" text="Afsar Alam">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="mobileNo" alignment="CENTER" layoutX="123.0" layoutY="61.0" prefHeight="17.0" prefWidth="188.0" text="MOB. NO. : 9852219786">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="teacherSubject" alignment="CENTER" layoutX="124.0" layoutY="89.0" prefHeight="17.0" prefWidth="184.0" text="Language">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="teacherId" alignment="CENTER" layoutX="125.0" layoutY="125.0" prefHeight="17.0" prefWidth="184.0" text="Teacher ID : 02">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="teacherType" alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="126.0" prefHeight="17.0" prefWidth="111.0" text="Co-Director" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

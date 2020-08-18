@@ -1,0 +1,36 @@
+#splashScreenMainAPane{
+    -fx-background-color: #212121;
+}
+
+#getStartButton{
+    -fx-background-color:  #616161;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-cursor: hand;
+}
+
+#rotatingShape1{
+    -fx-fill: deeppink;
+    -fx-opacity: .8;
+}
+
+#rotatingShape2{
+    -fx-fill: tomato;
+    -fx-opacity: .8;
+}
+
+#rotatingShape{
+    -fx-fill: #00c853;
+    -fx-opacity: .8;
+}
+
+#trangleShape{
+    -fx-fill: #7e57c2;
+}
+
+#craetiveShape{
+    -fx-background-color: #eee;
+    -fx-shape: "M10,792c0,0,32.2-264.2,313-283.4c0,0,143.8,4.1,168.5-90.4c0,0,11.5-73.2,120.5-87.7V792H10z";
+    -fx-opacity: .1;
+
+}

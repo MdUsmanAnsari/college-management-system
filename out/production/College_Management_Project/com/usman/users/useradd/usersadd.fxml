@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="userAddMainPane" prefHeight="600.0" prefWidth="900.0" stylesheets="@../../dashboard/CustomTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usman.users.useradd.UserAddController">
+   <children>
+      <HBox alignment="CENTER" layoutY="97.0" prefHeight="410.0" prefWidth="960.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="106.0">
+         <children>
+            <Pane fx:id="userRegisterPane" prefHeight="410.0" prefWidth="778.0">
+               <children>
+                  <Polyline fx:id="polyLineDesign" fill="#e8e5e5" layoutX="464.0" layoutY="38.0" points="37.0, -38.0, 314.0, -38.0, 314.0, 372.0, -89.0, 372.0, 37.0, -38.0" strokeType="INSIDE" strokeWidth="0.0" />
+                  <JFXTextField fx:id="passwordTextField" labelFloat="true" layoutX="56.0" layoutY="203.0" prefHeight="32.0" prefWidth="300.0" promptText="Password" />
+                  <JFXTextField fx:id="emailTexField" labelFloat="true" layoutX="56.0" layoutY="125.0" prefHeight="32.0" prefWidth="300.0" promptText="Email" />
+                  <Label alignment="CENTER" layoutX="92.0" layoutY="8.0" prefHeight="41.0" prefWidth="231.0" text="REGISTOR" textFill="#ff6464">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="saveUserRecordBtn" disable="true" layoutX="257.0" layoutY="332.0" onAction="#saveBtnClick" prefHeight="41.0" prefWidth="100.0" text="Save" />
+                  <JFXButton fx:id="uploadUserPicBtn" buttonType="RAISED" layoutX="562.0" layoutY="332.0" onAction="#uploadBtnClick" prefHeight="41.0" prefWidth="136.0" text="Upload" />
+                  <Text fx:id="passwordErrorText" fill="RED" layoutX="57.0" layoutY="255.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It's Empty" wrappingWidth="158.9306532740593">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="emailErrorText" fill="RED" layoutX="58.0" layoutY="177.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It's Empty" wrappingWidth="308.9306532740593">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <JFXRadioButton fx:id="studentRadioBtn" layoutX="55.0" layoutY="65.0" selected="true" text="Student" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="typeRadioBtn" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="teacherRadioBtn" layoutX="165.0" layoutY="65.0" text="Teacher" textFill="WHITE" toggleGroup="$typeRadioBtn" />
+                  <Text fx:id="imageErrorText" fill="RED" layoutX="584.0" layoutY="400.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must be lesh than 500kb" wrappingWidth="158.9306532740593">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="userImageText" fill="#ff6464" layoutX="562.0" layoutY="61.0" text="USER IMAGE" underline="true">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="OTPTextField" disable="true" labelFloat="true" layoutX="57.0" layoutY="265.0" prefHeight="32.0" prefWidth="300.0" promptText="Enter OTP" />
+                  <Text fx:id="OTPErrorText" fill="RED" layoutX="59.0" layoutY="318.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It's Empty" wrappingWidth="308.9306532740593">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <JFXSpinner fx:id="emailSentSpinner" layoutX="374.0" layoutY="125.0" prefHeight="32.0" prefWidth="31.0" visible="false" />
+                  <JFXButton fx:id="resendEmailBtn" layoutX="378.0" layoutY="128.0" onAction="#resendEmailBtnClick" text="Re-Send" visible="false" />
+                  <Circle fx:id="userPicView" fill="DODGERBLUE" layoutX="622.0" layoutY="204.0" radius="116.0" stroke="#ff6464" strokeType="INSIDE" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

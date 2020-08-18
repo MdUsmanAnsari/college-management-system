@@ -1,0 +1,142 @@
+.root{
+
+    primary-dark:rgb(44,44,46);
+    light-dark :rgb(84,84,86);
+    text-color:rgb(209,209,214);
+    primary-light:rgb(235,235,240);
+    secondary-light:rgb(229,229,234);
+    pink-light:rgb(255,55,95);
+
+    drop-shadow: dropshadow(gaussian, rgba(0, 0, 0, 0.52), 3, 0, 0, 0);
+}
+
+
+.jfx-button{
+    -fx-background-color:pink-light;
+    -fx-text-fill: primary-light;
+
+}
+
+#imageBrowserBtn{
+    -fx-background-color:transparent;
+    -fx-background-image: url("imgIcon.png");
+    -fx-background-size: 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-radius: 50px 10px 100px 13px;
+}
+
+
+
+#loginMainPane{
+    -fx-background-color:primary-dark;
+}
+
+
+
+#collegeTitleText,
+#managementTitleText,
+#collegeQouteText,
+#singInSinupText{
+    -fx-fill:primary-light;
+}
+
+
+
+#leftSidePane{
+    -fx-background-color:light-dark;
+}
+
+#signInPane,#signUpPane{
+    -fx-background-color:primary-dark;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color:primary-dark;
+
+}
+
+#signInHereText,
+#singUpHereText,
+#forgatePasswordText{
+    -fx-fill: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);;
+}
+
+
+#signUpButton{
+    -fx-background-color: #eee;
+    -fx-text-fill: #000;
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+}
+
+
+.jfx-text-field{
+    -fx-text-fill:linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+    -jfx-focus-color:primary-light;
+    -jfx-unfocus-color:linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.59);
+}
+
+#signInPane .label{
+    -fx-text-fill: red;
+}
+
+
+
+#signInButton,#signUpButton{
+    -fx-text-fill: #000;
+    -fx-background-color:linear-gradient(to top left, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+
+}
+
+
+
+
+
+#curveShapePane,
+#curveShapePane1,
+#curveShapePane2,
+#curveShapePane3{
+    -fx-background-color: pink-light;
+    -fx-shape: "M243.7,320.8l0-129.5c0,0,0-9.1,8-9l126.5-0.1C378.3,182.2,249.8,214.3,243.7,320.8z";
+}
+
+#devText{
+    -fx-fill: #eee;
+}
+
+
+#browseBtn{
+    -fx-text-fill: #00e165;
+    -fx-background-image: url("UploadPic1.png");
+    -fx-background-size: 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-radius: 50px 10px 100px 16px;
+}
+
+
+#userImageView{
+    -fx-fill: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+    -fx-stroke:linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+}
+
+
+#roleComboBox{
+    -jfx-focus-color:#eee;
+    -fx-prompt-text-fill:#eee;
+    -jfx-unfocus-color:#eee;
+}
+
+#roleComboBox .list-cell{
+    -fx-text-fill: #fff;
+    -fx-background-color: transparent;
+}
+
+
+
+#roleComboBox .list-view{
+    -fx-background-color: primary-dark;
+}

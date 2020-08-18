@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="loginMainPane" prefHeight="532.0" prefWidth="941.0" stylesheets="@custom_theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usman.login.LoginController">
+   <children>
+      <Pane fx:id="leftSidePane" layoutX="550.0" opacity="0.51" prefHeight="532.0" prefWidth="400.0" />
+      <Pane fx:id="signInPane" layoutX="586.0" layoutY="16.0" prefHeight="496.0" prefWidth="336.0">
+         <children>
+            <Pane fx:id="curveShapePane" layoutX="-1.0" prefHeight="110.0" prefWidth="112.0" />
+            <Pane fx:id="curveShapePane1" layoutX="224.0" layoutY="386.0" prefHeight="110.0" prefWidth="112.0" rotate="180.0" />
+            <JFXTextField fx:id="userEmailTextField" labelFloat="true" layoutX="20.0" layoutY="176.0" prefHeight="33.0" prefWidth="296.0" promptText="Email" />
+            <JFXTextField fx:id="userPasswordTextField" labelFloat="true" layoutX="20.0" layoutY="251.0" prefHeight="33.0" prefWidth="296.0" promptText="Password" />
+            <Text fill="WHITE" layoutX="116.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGN-IN" underline="true" wrappingWidth="112.00001442432404">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="signInBtn" defaultButton="true" layoutX="213.0" layoutY="324.0" onAction="#signInBtnClick" prefHeight="36.0" prefWidth="100.0" text="SIGN-IN" />
+            <Label fx:id="emailErrorLabel" layoutX="20.0" layoutY="213.0" prefHeight="22.0" prefWidth="296.0" text="Error" visible="false" />
+            <Label fx:id="passwordErrorLabel" layoutX="20.0" layoutY="286.0" prefHeight="22.0" prefWidth="296.0" text="Error" visible="false" />
+         </children>
+      </Pane>
+      <Pane fx:id="signUpPane" layoutX="586.0" layoutY="16.0" prefHeight="496.0" prefWidth="336.0" translateX="400.0">
+         <children>
+            <Pane fx:id="curveShapePane3" layoutX="233.0" layoutY="388.0" prefHeight="110.0" prefWidth="103.0" rotate="180.0" />
+            <Text fill="WHITE" layoutX="122.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SING-UP" wrappingWidth="112.00001442432404">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="emailTextField" labelFloat="true" layoutX="16.0" layoutY="205.0" prefHeight="33.0" prefWidth="296.0" promptText="Email" />
+            <Label fx:id="emailError" layoutX="16.0" layoutY="236.0" prefHeight="32.0" prefWidth="296.0" text="Enter email id" textFill="RED" visible="false" />
+            <JFXTextField fx:id="newPasswordTextFiled" labelFloat="true" layoutX="16.0" layoutY="278.0" prefHeight="33.0" prefWidth="296.0" promptText="Password" />
+            <Label fx:id="passwordError" layoutX="16.0" layoutY="306.0" prefHeight="32.0" prefWidth="296.0" text="Enter Password" textFill="RED" visible="false" />
+            <JFXTextField fx:id="newConfirmPasswordTextField" labelFloat="true" layoutX="15.0" layoutY="350.0" prefHeight="33.0" prefWidth="296.0" promptText="ConfirmPassword" />
+            <Label fx:id="passwordError1" layoutX="16.0" layoutY="386.0" prefHeight="32.0" prefWidth="296.0" text="Enter Password" textFill="RED" visible="false" />
+            <JFXButton fx:id="signUpBtn" layoutX="200.0" layoutY="406.0" onAction="#signUpBtnClick" prefHeight="36.0" prefWidth="100.0" text="Sign-Up" />
+            <Circle fx:id="userImage" fill="#ffffff00" layoutX="168.0" layoutY="78.0" radius="41.0" stroke="WHITE" strokeType="INSIDE" />
+            <JFXComboBox fx:id="roleComboBox" labelFloat="true" layoutX="15.0" layoutY="136.0" prefHeight="33.0" prefWidth="296.0" promptText="Select Role" />
+            <JFXButton fx:id="imageBrowserBtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="164.0" layoutY="81.0" onAction="#browserImage" prefHeight="33.0" prefWidth="41.0" text="Button" />
+            <Pane fx:id="curveShapePane2" layoutY="-1.0" prefHeight="110.0" prefWidth="103.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="mailSentPane" layoutX="586.0" layoutY="16.0" prefHeight="496.0" prefWidth="336.0" translateX="400.0">
+         <children>
+            <Pane fx:id="mailSending" prefHeight="496.0" prefWidth="336.0">
+               <children>
+                  <JFXSpinner layoutX="90.0" layoutY="127.0" prefHeight="156.0" prefWidth="156.0" />
+                  <Label alignment="CENTER" layoutX="70.0" layoutY="308.0" prefHeight="35.0" prefWidth="197.0" text="Sending" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="mailSentMsg" prefHeight="496.0" prefWidth="336.0" visible="false">
+               <children>
+                  <Label alignment="CENTER" layoutX="78.0" layoutY="210.0" prefHeight="44.0" prefWidth="181.0" text="Thank you!" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="261.0" prefHeight="44.0" prefWidth="318.0" text="Your message has been sent successfully." textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="otpPane" layoutX="586.0" layoutY="16.0" prefHeight="496.0" prefWidth="336.0" translateX="400.0">
+         <children>
+            <Label layoutX="18.0" layoutY="128.0" prefHeight="44.0" prefWidth="265.0" text="Enter a verification code" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMsg" alignment="TOP_CENTER" layoutX="18.0" layoutY="178.0" prefHeight="110.0" prefWidth="296.0" text="An email with a verification code was just sent to " textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtOtp" labelFloat="true" layoutX="18.0" layoutY="284.0" prefHeight="44.0" prefWidth="296.0" promptText="Enter Code" />
+            <JFXButton fx:id="btnConfirm" layoutX="212.0" layoutY="352.0" onAction="#btnConfirmOnAction" prefHeight="36.0" prefWidth="100.0" ripplerFill="#1478fc" text="Confirm" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Text fill="WHITE" layoutX="22.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Better Eduction Better Life." wrappingWidth="349.759765625">
+         <font>
+            <Font name="Verdana" size="15.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="signInSignUpBtn" layoutX="219.0" layoutY="284.0" onAction="#signInSignUpBtnClick" prefHeight="33.0" prefWidth="103.0" text="SIGN-UP" />
+      <Text fill="WHITE" layoutX="22.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ANS COLLGE MANAGEMENT SYSTEM" wrappingWidth="496.759765625">
+         <font>
+            <Font name="Verdana Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="signUpSignInText" fill="WHITE" layoutX="14.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Your Account ?" textAlignment="CENTER" wrappingWidth="532.0000028014183">
+         <font>
+            <Font name="Verdana" size="26.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="34.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed By : Md.Usman Ansari" wrappingWidth="332.759765625">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="-3.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome " textAlignment="CENTER" wrappingWidth="551.759765625">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="closeBtn" layoutX="10.0" layoutY="15.0" onAction="#closeBtn" prefHeight="15.0" prefWidth="25.0" text="X" />
+   </children>
+</AnchorPane>

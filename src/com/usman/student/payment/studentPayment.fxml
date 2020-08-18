@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="studentPaymentMainPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usman.student.payment.StudentPaymentController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="551.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="495.0" minWidth="500.0" prefHeight="495.0" prefWidth="600.0">
+               <children>
+                  <AnchorPane fx:id="paymentFeeMainPane" prefHeight="519.0" prefWidth="421.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="52.0" layoutY="52.0" prefHeight="35.0" prefWidth="336.0" text="Fee Payment">
+                           <font>
+                              <Font name="Times New Roman Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="52.0" layoutY="108.0" prefHeight="43.0" prefWidth="336.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" layoutX="-8.0" layoutY="1.0" prefHeight="43.0" prefWidth="155.0" text="Course :">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCourse" layoutX="159.0" layoutY="2.0" prefHeight="39.0" prefWidth="165.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label fx:id="courseFeeLabel" layoutX="52.0" layoutY="169.0" prefHeight="69.0" prefWidth="165.0" text="Course Fee :">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="52.0" layoutY="223.0" prefHeight="79.0" prefWidth="165.0" text="Pay Fee :">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="52.0" layoutY="302.0" prefHeight="54.0" prefWidth="156.0" text="Dues Fee :">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCourseFee" layoutX="223.0" layoutY="190.0" prefHeight="24.0" prefWidth="165.0" text="12000">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDuesFee" layoutX="223.0" layoutY="317.0" prefHeight="24.0" prefWidth="165.0" text="12000">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtFeePay" focusColor="WHITE" layoutX="223.0" layoutY="237.0" prefHeight="37.0" prefWidth="82.0" unFocusColor="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="btnPay" buttonType="RAISED" layoutX="144.0" layoutY="415.0" onAction="#btnPayOnAction" prefHeight="48.0" prefWidth="141.0" text="Pay">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <Label fx:id="errorLbl" layoutX="223.0" layoutY="285.0" style="-fx-text-fill: red;" text="It's Empty !" visible="false">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

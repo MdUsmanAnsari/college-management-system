@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPane" prefHeight="553.0" prefWidth="772.0" style="-fx-background-color: transaparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usman.dashboard.UserProfileController">
+   <children>
+      <HBox fx:id="changeUserDetailsHbox" alignment="CENTER" layoutX="127.0" prefHeight="532.0" prefWidth="780.0" style="-fx-background-color: #eee; -fx-background-radius: 10;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Pane fx:id="changeUserDetailsForm" prefHeight="480.0" prefWidth="742.0">
+               <children>
+                  <Pane fx:id="userPane" layoutX="33.0" layoutY="57.0" prefHeight="303.0" prefWidth="344.0">
+                     <children>
+                        <JFXTextField fx:id="txtName" labelFloat="true" layoutX="14.0" layoutY="70.0" prefHeight="32.0" prefWidth="300.0" promptText="Name" />
+                        <JFXTextField fx:id="emailTexFlied" disable="true" labelFloat="true" layoutX="14.0" layoutY="124.0" prefHeight="32.0" prefWidth="300.0" promptText="Email" />
+                        <JFXTextField fx:id="passwordTextFlied" labelFloat="true" layoutX="14.0" layoutY="179.0" prefHeight="32.0" prefWidth="300.0" promptText="Password" />
+                        <JFXTextField fx:id="passwordTextFlied1" labelFloat="true" layoutX="14.0" layoutY="239.0" prefHeight="32.0" prefWidth="300.0" promptText="Confirm Password" />
+                        <Pane fx:id="progressPane" layoutX="70.0" layoutY="74.0" visible="false">
+                           <children>
+                              <Label fx:id="lblSentMail" alignment="CENTER" layoutX="-4.0" layoutY="186.0" prefHeight="25.0" prefWidth="200.0" text="Sending...">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXSpinner fx:id="emailSentSpinner" prefHeight="170.0" prefWidth="200.0" radius="100.0" />
+                           </children>
+                        </Pane>
+                        <Label alignment="CENTER" layoutX="40.0" layoutY="-30.0" prefHeight="41.0" prefWidth="231.0" text="IT'S YOU">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="uploadUserPicBtn" buttonType="RAISED" layoutX="513.0" layoutY="332.0" onAction="#uploadUserPicBtnOnAction" prefHeight="36.0" prefWidth="136.0" style="-fx-background-color: rgb(255,55,95);;" text="Upload" textFill="WHITE" />
+                  <JFXTextField fx:id="OTPTextField" disable="true" labelFloat="true" layoutX="47.0" layoutY="371.0" prefHeight="32.0" prefWidth="300.0" promptText="Enter OTP" />
+                  <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="258.0" layoutY="440.0" onAction="#btnSaveOnAction" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: rgb(255,55,95);;" text="Change" textFill="WHITE" />
+                  <Text fx:id="imageErrorText" fill="RED" layoutX="497.0" layoutY="400.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must be lesh than 500kb" wrappingWidth="158.9306532740593">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="userImageText" fill="#4a4a4a" layoutX="524.0" layoutY="49.0" text="USER IMAGE" underline="true">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Circle fx:id="userPicView" fill="DODGERBLUE" layoutX="576.0" layoutY="198.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                  <JFXButton fx:id="cloaseBtn" layoutX="676.0" layoutY="2.0" onAction="#closeBtnClicked" prefHeight="17.0" prefWidth="23.0" style="-fx-background-color: rgb(255,55,95);;" text="X" textFill="WHITE" />
+               </children>
+               <effect>
+                  <DropShadow color="WHITE" height="8.0" radius="3.5" width="8.0" />
+               </effect>
+            </Pane>
+         </children>
+         <padding>
+            <Insets bottom="26.0" left="26.0" right="26.0" top="26.0" />
+         </padding>
+         <effect>
+            <DropShadow color="#0000008d" radius="7.7775" width="12.11" />
+         </effect>
+      </HBox>
+   </children>
+</AnchorPane>

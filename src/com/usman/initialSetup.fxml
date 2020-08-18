@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="341.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usman.InitialSetupController">
+   <children>
+      <VBox alignment="CENTER" layoutX="96.0" layoutY="28.0" spacing="36.0" style="-fx-background-color: #212121;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="6.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="318.0" text="Initial Setup" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtEmail" focusColor="WHITE" labelFloat="true" prefHeight="38.0" prefWidth="313.0" promptText="Email" unFocusColor="#eeeeee">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPassword" focusColor="WHITE" labelFloat="true" layoutX="36.0" layoutY="110.0" prefHeight="38.0" prefWidth="313.0" promptText="Password" unFocusColor="#eeeeee">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPassword1" focusColor="WHITE" labelFloat="true" layoutX="36.0" layoutY="184.0" prefHeight="38.0" prefWidth="313.0" promptText="Password" unFocusColor="#eeeeee">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" onAction="#btnSaveOnAction" prefHeight="9.0" prefWidth="123.0" style="-fx-background-color: pink;" text="Save" textFill="#222222">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="26.0" left="26.0" right="26.0" top="26.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

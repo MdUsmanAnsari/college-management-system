@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="studentListMainPane" prefHeight="600.0" prefWidth="900.0" stylesheets="@../../dashboard/CustomTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usman.student.studentlist.StudentListController">
+   <children>
+      <TableView fx:id="studentTable" fixedCellSize="0.0" layoutY="115.0" prefHeight="468.0" prefWidth="1150.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="115.0">
+         <columns>
+            <TableColumn fx:id="columnSelectRow" maxWidth="46.0" minWidth="46.0" prefWidth="46.0" resizable="false" text="Select" />
+            <TableColumn fx:id="columnName" maxWidth="300.0" minWidth="286.0" prefWidth="232.0" text="Name" />
+            <TableColumn fx:id="columnRoll" maxWidth="156.0" minWidth="100.0" prefWidth="73.0" text="Roll No." />
+            <TableColumn fx:id="columnCourse" maxWidth="156.0" minWidth="100.0" prefWidth="10.0" text="Course" />
+            <TableColumn fx:id="columnPart" maxWidth="126.0" minWidth="100.0" prefWidth="10.0" text="Part" />
+            <TableColumn fx:id="columnSession" maxWidth="156.0" minWidth="126.0" prefWidth="10.0" text="Session" />
+            <TableColumn fx:id="columnMobile" maxWidth="250.0" minWidth="206.0" prefWidth="10.0" text="Mobile No." />
+            <TableColumn fx:id="columnView" maxWidth="180.0" minWidth="90.0" prefWidth="119.0" text="View" />
+            <TableColumn fx:id="columnEdit" maxWidth="90.0" minWidth="90.0" prefWidth="81.0" resizable="false" text="Edit" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox alignment="CENTER_RIGHT" layoutX="269.0" layoutY="75.0" prefHeight="29.0" prefWidth="510.0" spacing="10.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <JFXButton fx:id="refreshBtn" contentDisplay="GRAPHIC_ONLY" onAction="#refreshBtnOnAction" prefHeight="30.0" prefWidth="34.0" ripplerFill="TRANSPARENT" text="Replace">
+               <graphic>
+                  <Pane fx:id="refresh_icon" prefHeight="20.0" prefWidth="16.0" />
+               </graphic>
+            </JFXButton>
+            <TextField fx:id="studentSearchListBtn" prefHeight="31.0" prefWidth="100.0" promptText="Search..." />
+         </children>
+      </HBox>
+      <Text fx:id="studentListTitle" fill="#f8f8f8" layoutX="22.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT LIST" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="24.1708984375">
+         <font>
+            <Font name="Franklin Gothic Medium Italic" size="26.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="studentDeleteBtn" layoutX="20.0" layoutY="76.0" onAction="#deleteBtnClick" prefHeight="27.0" prefWidth="65.0" text="Delete" AnchorPane.leftAnchor="20.0" />
+      <JFXCheckBox fx:id="newTabCheckBox" layoutX="803.0" layoutY="35.0" prefHeight="16.0" prefWidth="73.0" text="New Tab" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="35.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXCheckBox>
+      <ComboBox fx:id="courseComboBox" layoutX="176.0" layoutY="77.0" onAction="#courseBtnClicked" prefHeight="25.0" prefWidth="100.0" promptText="Filter" />
+      <JFXButton fx:id="studentPromotionBtn" layoutX="99.0" layoutY="76.0" onAction="#studentPromotionBtnOnAction" prefHeight="27.0" prefWidth="65.0" text="Promote" />
+      <ComboBox fx:id="partComboBox" layoutX="284.0" layoutY="77.0" onAction="#partBtnClicked" prefHeight="25.0" prefWidth="100.0" promptText="Filter" />
+   </children>
+</AnchorPane>

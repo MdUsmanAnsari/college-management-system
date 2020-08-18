@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="confirmationPopup" alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usman.popup.PopupController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="130.0" prefWidth="392.0">
+         <children>
+            <Pane fx:id="confirmationAlertPane" prefHeight="200.0" prefWidth="392.0">
+               <children>
+                  <JFXButton fx:id="btnYes" layoutX="129.0" layoutY="85.0" prefHeight="25.0" prefWidth="60.0" text="OK" textFill="WHITE" />
+                  <JFXButton fx:id="btnCancel" layoutX="209.0" layoutY="85.0" onAction="#btnCancelClicked" prefWidth="60.0" text="Cancel" textFill="WHITE" />
+                  <Label fx:id="lblConfirmation" alignment="CENTER" layoutY="28.0" prefHeight="37.0" prefWidth="392.0" text="Label">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

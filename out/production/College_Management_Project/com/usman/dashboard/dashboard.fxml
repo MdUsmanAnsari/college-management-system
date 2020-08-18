@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="dashboardMainPane" minHeight="600.0" minWidth="900.0" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usman.dashboard.DashboardController">
+   <left>
+      <AnchorPane fx:id="navMainPane" prefHeight="768.0" prefWidth="176.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle fx:id="studentFillInButton" fill="#ff1f59" height="46.0" layoutY="265.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Rectangle fx:id="dashboardFillInButton" fill="#ff1f59" height="46.0" layoutY="211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Rectangle fx:id="teacherFillInButton" fill="#ff1f59" height="46.0" layoutY="326.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Rectangle fx:id="usersFillInButton" fill="#ff1f59" height="46.0" layoutY="383.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Rectangle fx:id="aboutFillInButton" fill="#ff1f59" height="46.0" layoutY="440.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Pane fx:id="teacher_icon" layoutX="25.0" layoutY="332.0" prefHeight="34.0" prefWidth="31.0" />
+            <Pane fx:id="student_icon" layoutX="23.0" layoutY="393.0" prefHeight="26.0" prefWidth="34.0" />
+            <Pane fx:id="about_icon" layoutX="25.0" layoutY="449.0" prefHeight="29.0" prefWidth="30.0" />
+            <Pane fx:id="home_icon" layoutX="27.0" layoutY="222.0" prefHeight="24.0" prefWidth="25.0" />
+            <Pane fx:id="user_icon" layoutX="24.0" layoutY="273.0" prefHeight="29.0" prefWidth="32.0" />
+            <JFXButton fx:id="studentBtn" focusTraversable="false" layoutY="266.0" onAction="#studentBtnClick" prefHeight="46.0" prefWidth="176.0" text="Student" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="dashboardBtn" layoutY="211.0" onAction="#dashboardBtnClick" prefHeight="46.0" prefWidth="176.0" text="Dashboard" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="teacherBtn" layoutY="326.0" onAction="#teacherBtnClick" prefHeight="46.0" prefWidth="176.0" text="Teacher" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="usersBtn" layoutY="383.0" onAction="#usersBtnClick" prefHeight="46.0" prefWidth="176.0" text="Users" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="aboutBtn" layoutY="440.0" onAction="#aboutBtnClick" prefHeight="46.0" prefWidth="176.0" text="Abouts" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></JFXButton>
+            <Text fx:id="userTypeText" layoutX="6.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER TYPE: ADMIN" textAlignment="CENTER" wrappingWidth="166.0078125">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="13.0" />
+               </font>
+            </Text>
+            <Rectangle arcWidth="5.0" fill="WHITE" height="3.0" layoutY="178.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="176.0" />
+            <Circle fx:id="userImage" fill="#ff1f1f" layoutX="88.0" layoutY="65.0" onMouseClicked="#userProfileClick" radius="43.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" />
+            <Text fx:id="usernameText" layoutX="7.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MD.USMAN ANSARI" textAlignment="CENTER" wrappingWidth="166.0078125">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="16.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="logoutFillInButton" fill="#ff1f59" height="46.0" layoutY="652.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="70.0" />
+            <Pane fx:id="logout_icon" layoutX="25.0" layoutY="662.0" prefHeight="29.0" prefWidth="30.0" AnchorPane.bottomAnchor="77.0" />
+            <JFXButton fx:id="logoutBtn" layoutY="652.0" onAction="#logoutClicked" prefHeight="46.0" prefWidth="176.0" text="Log-Out" textFill="WHITE" AnchorPane.bottomAnchor="70.0">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXToggleButton fx:id="changeThemes" layoutX="2.0" layoutY="700.0" prefHeight="46.0" prefWidth="146.0" text="Light Mode" textFill="WHITE" AnchorPane.bottomAnchor="10.0" />
+         </children></AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="dashboardCenterPane" prefHeight="730.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="dashboardTopPane" layoutX="7.0" layoutY="4.0" prefHeight="65.0" prefWidth="1190.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fx:id="dashBoardTitleText" fill="WHITE" layoutX="22.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DASHBOARD" textAlignment="CENTER" underline="true" wrappingWidth="202.0078125">
+                     <font>
+                        <Font name="Franklin Gothic Medium Italic" size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#00000063" height="5.0" radius="0.75" width="0.0" />
+               </effect>
+            </Pane>
+            <AnchorPane fx:id="userProfileAnchorPane" layoutX="-176.0" opacity="0.0" prefHeight="33.0" prefWidth="36.0" scaleX="0.0" scaleY="0.0" style="-fx-background-color: white; -fx-background-radius: 40px;" visible="false" AnchorPane.leftAnchor="-193.0" AnchorPane.topAnchor="-10.0" />
+         </children></AnchorPane>
+   </center>
+</BorderPane>

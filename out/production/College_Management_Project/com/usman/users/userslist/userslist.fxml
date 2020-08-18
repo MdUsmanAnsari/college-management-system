@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="usersListMainPane" prefHeight="600.0" prefWidth="1120.0" stylesheets="@../../dashboard/CustomTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usman.users.userslist.UsersListController">
+   <children>
+      <TableView fx:id="usersTableView" layoutX="22.0" layoutY="100.0" prefHeight="488.0" prefWidth="1068.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="76.0">
+        <columns>
+            <TableColumn fx:id="selectRowColumn" maxWidth="66.0" minWidth="66.0" prefWidth="66.0" resizable="false" text="Select" />
+          <TableColumn fx:id="usernameColumn" prefWidth="138.0" text="User's Name" />
+          <TableColumn fx:id="emailColumn" prefWidth="179.0" text="Email" />
+            <TableColumn fx:id="roleColumn" maxWidth="96.0" minWidth="96.0" prefWidth="75.0" resizable="false" text="Role" />
+            <TableColumn fx:id="creationDateColumn" prefWidth="75.0" text="Creation Date" />
+            <TableColumn fx:id="modfictionDateColumn" prefWidth="75.0" text="Last Modification" />
+            <TableColumn fx:id="lastActiveDateColumn" prefWidth="190.0" text="Last Active " />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton fx:id="btnDelete" layoutX="26.0" layoutY="34.0" onAction="#btnDeleteOnAction" prefHeight="33.0" prefWidth="74.0" ripplerFill="RED" text="Delete" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="30.0" />
+      <HBox fx:id="changeUserDetailsHbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="changeUserDetailsForm" prefHeight="433.0" prefWidth="837.0">
+               <children>
+                  <JFXTextField fx:id="passwordTextFlied" labelFloat="true" layoutX="56.0" layoutY="203.0" prefHeight="32.0" prefWidth="300.0" promptText="Password" />
+                  <JFXTextField fx:id="emailTexFlied" labelFloat="true" layoutX="56.0" layoutY="125.0" prefHeight="32.0" prefWidth="300.0" promptText="Email" />
+                  <Rectangle fx:id="userPicView" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="223.0" layoutX="568.0" layoutY="78.0" stroke="BLACK" strokeType="INSIDE" width="191.0">
+                     <effect>
+                        <DropShadow color="#0000005b" height="6.17" radius="2.525" width="5.93" />
+                     </effect>
+                  </Rectangle>
+                  <Label alignment="CENTER" layoutX="108.0" layoutY="23.0" prefHeight="41.0" prefWidth="231.0" text="REGISTOR">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="saveUserRecordBtn" buttonType="RAISED" layoutX="258.0" layoutY="328.0" prefHeight="36.0" prefWidth="100.0" text="Save" />
+                  <JFXButton fx:id="uploadUserPicBtn" buttonType="RAISED" layoutX="600.0" layoutY="332.0" prefHeight="36.0" prefWidth="136.0" text="Upload" />
+                  <Text fx:id="passwordErrorText" fill="RED" layoutX="57.0" layoutY="255.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It's Empty" wrappingWidth="158.9306532740593">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="emailErrorText" fill="RED" layoutX="58.0" layoutY="177.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It's Empty" wrappingWidth="308.9306532740593">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <JFXRadioButton fx:id="studentRadioBtn" layoutX="55.0" layoutY="76.0" selected="true" text="Student" textFill="#171717">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="typeRadioBtn" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="teacherRadioBtn" layoutX="165.0" layoutY="76.0" text="Teacher" textFill="#171717" toggleGroup="$typeRadioBtn" />
+                  <Text fx:id="imageErrorText" fill="RED" layoutX="584.0" layoutY="400.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must be lesh than 500kb" wrappingWidth="158.9306532740593">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="userImageText" fill="#5b5b5b" layoutX="606.0" layoutY="49.0" text="USER IMAGE" underline="true">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="OTPTextField" disable="true" labelFloat="true" layoutX="57.0" layoutY="265.0" prefHeight="32.0" prefWidth="300.0" promptText="Enter OTP" />
+                  <Text fx:id="OTPErrorText" fill="RED" layoutX="59.0" layoutY="318.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It's Empty" wrappingWidth="308.9306532740593">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <JFXSpinner fx:id="emailSentSpinner" layoutX="376.0" layoutY="131.0" prefHeight="32.0" prefWidth="31.0" visible="false" />
+                  <JFXButton fx:id="hideUserChangeBtn" layoutX="148.0" layoutY="328.0" onAction="#hideUserChangeBtnClicked" prefHeight="36.0" prefWidth="100.0" text="Hide" />
+               </children>
+               <effect>
+                  <DropShadow color="WHITE" height="8.0" radius="3.5" width="8.0" />
+               </effect>
+            </Pane>
+         </children>
+         <padding>
+            <Insets bottom="100.0" top="100.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

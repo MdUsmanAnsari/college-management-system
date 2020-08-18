@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="studentViewMainPane" prefHeight="1000.0" prefWidth="1300.0" stylesheets="@../../dashboard/CustomTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usman.student.studentview.StudentViewController">
+   <children>
+      <ScrollPane fx:id="studentViewMScrollPane" hbarPolicy="NEVER" prefHeight="1000.0" prefWidth="1245.0" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane fx:id="studentViewMainPane1" cacheShape="false" minHeight="700.0" minWidth="1176.0" prefHeight="1004.0" prefWidth="1301.0">
+               <children>
+                  <Polyline fx:id="studentResistorDesign2" layoutX="710.0" layoutY="937.0" points="-818.0, 67.0, 514.0, -228.0, 514.0, 74.0, -720.0, 67.0" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.rightAnchor="-10.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#4bf2a7" />
+                              <Stop color="#4bf2a7" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Polyline>
+                  <Polyline fx:id="studentResistorDesign1" layoutX="132.0" layoutY="865.0" points="-133.0, -865.0, 1169.0, -865.0, 1169.0, -773.0, -133.0, -454.0" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#4bf2a7ed" />
+                              <Stop color="#4bf2a7" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Polyline>
+                  <GridPane fx:id="studentViewGrid" alignment="CENTER" hgap="30.0" layoutX="20.0" layoutY="70.0" prefHeight="376.0" prefWidth="940.0" vgap="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="341.0" AnchorPane.topAnchor="70.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="26.0" prefWidth="250.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="26.0" prefWidth="250.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="250.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Student's Details" underline="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="sessionView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" promptText="Session" unFocusColor="BLACK" GridPane.columnIndex="2" />
+                        <JFXTextField fx:id="studentNameView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Student's Name" unFocusColor="#0d0d0d" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="courseView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" promptText="Course" unFocusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="partView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" promptText="Part" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="fatherNameView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Father's Name" GridPane.rowIndex="2" />
+                        <JFXTextField fx:id="fatherOccupationView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Occupation" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <JFXTextField fx:id="rollNumberView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" promptText="Roll Number" unFocusColor="BLACK" GridPane.columnIndex="1" />
+                        <JFXTextField fx:id="fatherMobileNoView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Mobile Number" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <JFXTextField fx:id="motherNameView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Mother's Name" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="motherOccupationView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Occupation" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="motherMobileNoView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Mobile Number" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="dateOfBirthView" editable="false" labelFloat="true" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" promptText="Date Of Birth" GridPane.rowIndex="4" />
+                        <JFXTextField fx:id="nationalityView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" promptText="Nationality" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <JFXTextField fx:id="genderView" editable="false" focusColor="#00d06f" labelFloat="true" maxHeight="300.0" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" promptText="Gender" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <JFXTextField fx:id="martilaStatusView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" promptText="Marital Status" GridPane.rowIndex="5" />
+                        <JFXTextField fx:id="studentMobileNoView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Mobile Number" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <JFXTextField fx:id="emailIdView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Email Id" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <JFXTextArea fx:id="addressView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="61.0" prefWidth="300.0" promptText="Peramament Address" GridPane.rowIndex="6" GridPane.rowSpan="2" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane fx:id="studentViewGrid1" alignment="CENTER" hgap="30.0" layoutX="21.0" layoutY="491.0" prefHeight="248.0" prefWidth="1155.0" vgap="20.0" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="125.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="26.0" prefWidth="250.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="26.0" prefWidth="250.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="250.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="250.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXTextField fx:id="disciplineNameView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Name of Discipline" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="languageView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" promptText="Language (Composition)" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="subsidiary1View" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" promptText="Subsidiary" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="subsidiary2View" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" promptText="Subsidiary" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="examNameView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Name of Examnation" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="boardUniversityNameView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Board/University Name" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="allSubjectView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Fill All Subject" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="passingYearComboBox" focusColor="#00d06f" labelFloat="true" prefHeight="28.0" prefWidth="208.0" promptText="Year of Passing" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label GridPane.rowIndex="2" />
+                        <Label text="Previous Exam Deatils" underline="true" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Dispcipline Deatils" underline="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="percentageView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="38.0" prefWidth="300.0" promptText="Percentage " GridPane.rowIndex="4" />
+                        <JFXTextField fx:id="divisionView" editable="false" focusColor="#00d06f" labelFloat="true" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" promptText="Division" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </GridPane>
+                  <ImageView fx:id="studentImageView" fitHeight="227.0" fitWidth="194.0" layoutX="982.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow color="#0000005c" height="28.42" radius="15.5625" width="35.83" />
+                     </effect>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="21.0" layoutY="851.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thanks for visit." wrappingWidth="213.43310546875">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="40.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT INFORMATION" underline="true" wrappingWidth="206.13671875">
+                     <font>
+                        <Font name="Franklin Gothic Medium Italic" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
